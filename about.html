@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Fabulous Flower Shop</title>
+    <link rel="stylesheet" type="text/css"href="flower.css">   
+</head>
+<body>
+
+<h1>Fabulous Flower Shop</h1>
+<nav>
+    <ul>
+        <a target="_self" href="home.html"><li>Home</li></a>
+        <a target="_self" href="index.html"><li>Order</li></a>
+        <a target="_self" href="rating.html"><li>Rating</li></a>
+        <a target="_self" href="about.html"><li>About Us</li></a>
+    </ul>
+</nav>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color:rgb(166, 187, 212);
+  color:rgb(5, 38, 49);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.active, .accordion:hover {
+  background-color: beige;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+</style>
+</head>
+<body>
+
+<h2>RESTAURANT DETAILS</h2>
+<br>
+
+<button class="accordion">About Us</button>
+<div class="panel">
+  <p>This Website is owned by Fabulous Flower Shop which have been established since 2002. In these few years, our shop have grown from fully retained to online business. Our passion is providing fresh flowers and gifts to your satisfaction for your lovely one in different occasions, like birthday, valentine day, mother day, wedding and etc.Through our easy-to-use website, same-day delivery and dedicated customer service.Besides,you can also rest assured your fresh arrangement will arrive on time and on budget.</p>
+  <p>***We have grown the business on repeat customers and by building trusting and caring relationships with our customers***</p>
+  <br>
+  <p>Operating hours:</p>
+  <p>Monday 10am to 3pm</p>
+  <p>Tuesday to Friday 10am to 6pm</p>
+  <P>Saturday & Sunday 10am to 8pm</P>
+</div>
+
+<button class="accordion">Contact Us</button>
+<div class="panel">
+  <p>Company Name</p>
+  <p>Fabulous Flower Sdn Bhd </p>
+  <br>
+  <p>Address</p>      
+  <p>88, Jalan Taman Canning 8,
+  Beautiful Garden,
+  31400 Ipoh, Perak.</p>
+  <br>
+  <p>Phone No. </p>
+  <p>+6011-2345678 (WhatsApp no.)</p>
+  <br>
+  <p>Email</p>           
+  <p>fabulousflowershop@gmail.com</p>
+</div>
+
+<button class="accordion">Delivery Info</button>
+<div class="panel">
+  <p>WHERE WE DELIVER</p>
+  <br>
+  <p>We offer deliveries from Mondays to Sundays in all the areas of Perak. Same-day deliveries are available from Mon to Saturdays for order with payment done by 2.00pm from Monday to Friday and 11.00am on Saturday.We also provide FREE delivery for orders with minimum purchase RM88.</p>
+  <p>***Free Delivery Coverage is within radius 7km from our workshop***</p>
+  <br>
+</div>
+
+<button class="accordion">Vouchers and Promotions</button>
+<div class="panel">
+  <p>Enjoy 10% off For First Order with promocode FFS528</p>
+  <P>Enjoy 5% off with promocode FFS219 on the date in the same month such as 11 November
+  <p>Follow our Instagram and post a story will also get up to 10% discount </p>
+  <p>***These all vouchers are valid on all products***</p>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<style>
+  footer{
+    width:-5px 105%;
+    padding: 10px 0 0 80px;
+    background: #eeeeee;
+  }
+
+  footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  footer .footer_main .footer_tag{
+    text-align: center;
+  }
+
+  footer .footer_main .footer_tag h2{
+    color:black;
+    margin-bottom: 25px;
+    font-size: 3opx;
+  }
+
+  footer .footer_main .footer_tag p{
+    margin: 10px 10px 0;
+    text-align: left;
+  }
+
+  footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor:pointer;
+  }
+
+  footer .footer_main .footer_tag i:hover{
+    color:darkblue
+  }
+</style>
+
+
+</body>
+</html>

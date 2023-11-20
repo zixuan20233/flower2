@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Fabulous Flower Shop</title>
+    <link rel="stylesheet" type="text/css"href="flower.css">   
+</head>
+<body>
+
+<h1>Fabulous Flower Shop</h1>
+<nav>
+    <ul>
+        <a target="_self" href="home.html"><li>Home</li></a>
+        <a target="_self" href="index.html"><li>Order</li></a>
+        <a target="_self" href="rating.html"><li>Rating</li></a>
+        <a target="_self" href="about.html"><li>About Us</li></a>
+    </ul>
+</nav>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link
+    href="https://font.googleapis.com/css?family=Source+Sans+3:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet">
+</head>
+
+<body>
+
+
+  <!--
+    - main container
+  -->
+    
+  <main class="container">
+    
+    <h1 class="heading">
+        <ion-icon name="cart-outline"></ion-icon>
+    </h1>
+
+    <div class="item-flex">
+
+       <!--
+        - checkout section
+       -->
+       <section class="checkout">
+
+        <h2 class="section-heading">Payment Details</h2>
+
+        <div class="payment-form">
+
+            <div class="payment-method">
+
+                <button class="method selected">
+                    <ion-icon name="card"></ion-icon>
+
+                    <span>Credit Card</span>
+
+                    <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                </button>
+
+                <button class="method">
+                    <ion-icon name="logo-paypal"></ion-icon>
+
+                    <span>Paypal</span>
+
+                    <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+                </button>
+
+            </div>
+
+            <form action="#">
+                
+                <div class="cardholder-name">
+                    <label for="cardholder-name" class="label-default">Cardholder name</label>
+                    <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+                </div>
+
+                <div class="card-number">
+                    <label for="card-number" class="label-default">Card number</label>
+                    <input type="number" name="card-number" id="card-number" class="input-default">
+                </div>
+
+                <div class="input-flex">
+
+                    <div class="expire-date">
+                        <label for="expire-date" class="label-default">Expiration date</label>
+
+                        <div class="input-flex">
+
+                           <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12"
+                             class="input-default">
+                            /
+                            <input type="number" name="year" id="expire-date" placeholder="99" min="1" max="99"
+                              class="input-default">
+
+                        </div>
+                    </div>
+
+                    <div class="cvv">
+                        <label for="cvv" class="label-default">CVV</label>
+                        <input type="number" name="cvv" id="cvv" class="input-default">
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <button class="btn btn-primary">
+            <b>Pay</b> RM <span id="payAmount">0.00</span>
+        </button>
+
+       </section>
+
+
+       <!--
+         - cart section
+       -->
+       <section class="cart">
+        
+        <div class="cart-item-box">
+
+            <h2 class="section-heading">Order Here</h2>
+
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower1.jpg" alt="Aurora" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Aurora Rose</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">118.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower2.jpg" alt="Baby breath" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Baby breath</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">138.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower3.jpg" alt="Red roses" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Classic Red Roses</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">188.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower4.jpg" alt="Pink tulips" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Pink Tulips</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">98.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower5.jpg" alt=Sunflower" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Helianthus</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">128.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower6.jpg" alt="graduation" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Proud Of You</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">199.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower7.jpg" alt="graduation" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">You Did It</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">139.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower8.jpg" alt="graduation" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Outstanding Achivement</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">169.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower8.jpg" alt="graduation" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Outstanding Achivement</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">169.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower9.jpg" alt="graduation" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Fly High</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">109.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower10.jpg" alt="bridal" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Fairy Tale Bridal</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">219.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower11.jpg" alt="bridal" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Posy Bridal</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">179.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower12.jpg" alt="floralfruit" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Fruitlicious</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">69.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower13.jpg" alt="Congratulations" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Heartiest Congratulations</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">220.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower14.jpg" alt="Congratulations" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Brilliat</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">208.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="product-card">
+
+                <div class="card">
+
+                    <div class="img-box">
+                        <img src="flower15.jpg" alt="Congratulations" width="80px" class="product-img">
+                    </div>
+
+                    <div class="detail">
+
+                        <h4 class="product-name">Bright Future</h4>
+
+                        <div class="wrapper">
+
+                            <div class="product-qty">
+                                <button id="decrement">
+                                    <ion-icon name="remove-outline"></ion-icon>
+                                </button>
+
+                                <span id="quantity">0</span>
+
+                                <button id="increment">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            
+                            <div class="price">
+                                RM <span id="price">238.00</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="wrapper">
+
+            <div class="discount-token">
+
+                <label for="discount-token" class="label-default">Gift card/discount code</label>
+
+                <div class="wrapper-flex">
+
+                    <input type="text" name="discount-token" id="discount-token" class="input-default">
+
+                    <button class="btn btn-outline">Apply</button>
+
+                </div>
+
+            </div>
+
+            <div class="amount">
+
+                <div class="subtotal">
+                    <span>Subtotal</span> <span>RM <span id="subtotal">0.00</span></span>
+                </div>
+
+                <div class="tax">
+                    <span>Tax</span> <span>RM <span id="tax">0.00</span></span>
+                </div>
+
+                <div class="shipping">
+                    <span>Shipping</span> <span>RM <span id="shipping">0.00</span></span>
+                </div>
+
+                <div class="total">
+                    <span>Total</span> <span>RM <span id="total">0.00</span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </div>
+
+    </main>
+
+
+
+
+
+
+    <!--
+        - custom js link
+    -->
+    <script src="./script.js"></script>
+
+    <!--
+        - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicon@5.5.2/dist/ionicons/ionicons.ems.js"></script>
+    <script nomodule src="https://unpkg.com/ionicon@5.5.2/dist/ionicons/ionicons.ems.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+    
+
+
+
+
+

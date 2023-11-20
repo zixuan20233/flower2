@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Fabulous Flower Shop</title>
+    <link rel="stylesheet" type="text/css"href="flower.css">   
+</head>
+<body>
+
+<h1>Fabulous Flower Shop</h1>
+<nav>
+    <ul>
+        <a target="_self" href="home.html"><li>Home</li></a>
+        <a target="_self" href="index.html"><li>Order</li></a>
+        <a target="_self" href="rating.html"><li>Rating</li></a>
+        <a target="_self" href="about.html"><li>About Us</li></a>
+    </ul>
+</nav>
+<!DoCTYPE HTML>
+<!-- THis is how comments look like -->
+<html>
+<!-- the title appear on the page-->
+<head>
+<title>Employee Tnterests Survey</title>
+</head>
+<body>
+<!-- as it is a survey form,we will need to submit the details,hencewe use form-->
+<!-- We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method-->
+<form action="http://google.co.in">
+<!-- If we remove this,every thing will move to the left og the page-->
+<div align="center">
+<!--Adds a heading to the form-->
+<h1>Customer Statisfaction Feeback</h1>
+Enter your name:
+<!-- Input type text ecify size-->
+<input type="text" name="UserName" size=35 maxlength=35 value="">
+<!-- Adds spaces - remove and see what happens -->
+</br></br>
+How satisfied were you with your experience today ?
+<p>
+</br>
+<!--Checkbox lets you select multiple options-->
+<input type="checkbox" name="Unsatisfied">Unsatisfied
+<input type="checkbox" name="Neutral">Neutral
+<input type="checkbox" name="Satisfied">Satisfied
+<input type="checkbox" name=" Very satisfied">Very satisfied
+
+</br>
+Enter your experience:
+<input type="text" name="Deptt" size=35 maxlength=35 value=""> </br> </br>
+
+Did you like our service ?:
+<!-- Radio buttons help you choose one out of the many values -->
+<input type="radio" name="exe" value="1">Yes
+<input type="radio" name="exe" value="2">No
+</p>
+</br>
+Tell us a little about the flower:
+<!-- For writing lot of text like descriptions with text wrapping,
+if you dont want text wrapping,you can and wap = "off" (horizontal Scrollbar)-->
+<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
+<P>
+What favourite flower that you like in our shop?
+<!--Select box lets you choose one of the multiole dropdown options-->
+<select name="moviepref"><option>
+<option value=1 selected ="true">Aurora Rose Bouquet
+<option value=2 >Baby Breath Bouquet
+<option value=3 >Classic Red Bouquet 
+<option value=4 >Pink Tulips Bouquet
+<option value=5 >Proud Of You
+<option value=6 >You Did It
+<option value=7 >Outstanding Achievement
+<option value=8 >Fairy Tale Bridal
+<option value=9 >Posy Bridal
+<option value=10 >Fruitlicious
+<option value=11 >Heartiest Congratulations
+<option value=12 >Brilliant
+<option value=13 >Bright Future
+<option value=14 >Fly High
+<option value=15 >Helianthus
+</select>
+</br></br>
+Would you like to come again ?:
+<!-- Radio buttons help you choose one out of the many values -->
+<input type="radio" name="exe" value=1>Yes
+<input type="radio" name="exe" value=2>No
+</P>
+</br>
+<!--submits the information entered in the form by the user -->
+<input type=submit value="Submit form">
+</div>
+</form>
+</body>
+</html>
